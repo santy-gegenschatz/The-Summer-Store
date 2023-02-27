@@ -1,11 +1,10 @@
-# Backend-Repository
-A repository with work that represents a fully functional ecommerce backend. It includes several RESTful API's, each of them working with different containers and data persistency methods.
+# The Summer Store
+The Summer Store is a straightforward ecommerce backend. It includes several RESTful API's, each of them working with different containers and data persistency methods. Features include: authentication, cart, purchase history, realtime updates, admin panel and more.
 
 ## Quick Start
 1) Git clone
-2) cd Entregable-25
-3) npm i
-4) nodemon app.js
+2) npm i
+3) nodemon app.js
 
 ## Features
 - **Authentication:** Users can register and login.
