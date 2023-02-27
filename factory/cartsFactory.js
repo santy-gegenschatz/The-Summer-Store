@@ -21,7 +21,7 @@ switch(cartsApiContainerType) {
         moduleToExport = require('../daos/carts/cartsSqlDao')
         break
     default:
-        moduleToExport = require('../daos/carts/cartsArchiveDao')
+        moduleToExport = require('../daos/carts/cartsMongoDao')
 }
 
 module.exports = moduleToExport

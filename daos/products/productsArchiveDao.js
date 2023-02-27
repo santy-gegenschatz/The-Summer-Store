@@ -1,4 +1,3 @@
-const Product = require('../../models/product')
 const Container = require('../../containers/archiveContainer') 
 const { logDebug } = require('../../loggers/logger')
 

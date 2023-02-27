@@ -3,6 +3,7 @@ The Summer Store is a straightforward ecommerce backend. It includes several RES
 
 ## Quick Start
 1) Git clone
+2) cd The-Summer-Store
 2) npm i
 3) nodemon app.js
 

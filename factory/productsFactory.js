@@ -22,7 +22,7 @@ switch(productsApiContainerType) {
         moduleToExport = require('../daos/products/productsSqlDao')
         break
     default:
-        moduleToExport = require('../daos/products/productsArchiveDao')
+        moduleToExport = require('../daos/products/productsMongoDao')
 }
 
 
