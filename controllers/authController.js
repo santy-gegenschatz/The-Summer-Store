@@ -74,7 +74,7 @@ const signUpUser = async (req, res, next) => {
         if (!err) {
             try {
                 // Send an email indicating that a new user has been created
-                // sendEmail(adminEmail, 'New user created', `A new user has been created. Username: ${user.username}. Address: ${user.address}. Phone number: ${user.phoneNumber}. Age: ${user.age}`)
+                sendEmail(adminEmail, 'New user created', `A new user has been created. Username: ${user.username}. Address: ${user.address}. Phone number: ${user.phoneNumber}. Age: ${user.age}`)
             } catch (err) {
                 logError(err)
             }

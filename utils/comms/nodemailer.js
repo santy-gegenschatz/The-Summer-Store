@@ -20,7 +20,7 @@ const sendEmail = async (to, subject, text) => {
         subject,
         text
     })
-    logDebug('Message sent: %s', info.messageId);
+    logInfo(`Message sent: ${info.messageId}`);
 }
 
 module.exports = { sendEmail }
