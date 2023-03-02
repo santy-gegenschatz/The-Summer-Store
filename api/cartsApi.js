@@ -60,7 +60,7 @@ class CartsApi {
     }
 
     async createCart() {
-        const newCart = {creationDate: new Date().toLocaleString(), items: []}
+        const newCart = {creationDate: new Date().toISOString(), items: []}
         logDebug('Creating new cart')
         logDebug(newCart)
         const createReponse = await this.cartsDao.add(newCart)
