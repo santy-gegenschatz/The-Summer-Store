@@ -1,5 +1,5 @@
 const { createTransport } = require('nodemailer') 
-const { logDebug } = require('../../loggers/logger')
+const { logInfo } = require('../../loggers/logger')
 
 const SENDER_MAIL = process.env.SENDER_MAIL
 const SENDER_PASSWORD = process.env.SENDER_PASSWORD
