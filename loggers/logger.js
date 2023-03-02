@@ -1,6 +1,9 @@
 require('dotenv').config()
 const pino = require('pino')
 let logger;
+const loggerWarn = pino({level: 'warn'}, './logs/warn.log')
+const loggerError = pino('./logs/error.log')
+
 if(process.env.ENVIRONMENT_TYPE === 'development') {
     logger = pino({
         level: 'debug',
@@ -13,8 +16,6 @@ if(process.env.ENVIRONMENT_TYPE === 'development') {
         level: 'info'
     })
 }
-    const loggerWarn = pino({level: 'warn'}, './logs/warn.log')
-    const loggerError = pino('./logs/error.log')
 
 const logRouteInfo = (req, res, next) => {
     const { method, url } = req

@@ -111,7 +111,6 @@ class usersMongoDao {
                 }
             } else if (typeof user.currentCart === 'undefined') {
                 const newCart = await cartsApi.createCart()
-                logDebug(newCart)
                 // Update the user with the new cart
                 await this.updateUser(user.id, {currentCart: newCart.payload._id})
                 const updatedUser = await this.getUserById(id)

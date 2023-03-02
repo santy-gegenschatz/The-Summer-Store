@@ -61,6 +61,8 @@ class CartsApi {
 
     async createCart() {
         const newCart = {creationDate: new Date().toLocaleString(), items: []}
+        logDebug('Creating new cart')
+        logDebug(newCart)
         const createReponse = await this.cartsDao.add(newCart)
         if (this.isNotError(createReponse)) {
             return this.throwSuccess('Cart succesfully created', createReponse)
