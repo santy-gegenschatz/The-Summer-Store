@@ -2,6 +2,5 @@ node_modules
 .env
 logs/error.log
 logs/warn.log
-public/uploads
-Private/uploads
+private/uploads
 .DS_Store
