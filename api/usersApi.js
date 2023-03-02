@@ -1,7 +1,7 @@
 const usersDao = require('../factory/usersFactory')
 const cartsApi = require('./cartsApi')
 
-const { logError } = require('../loggers/logger')
+const { logError, logDebug } = require('../loggers/logger')
 
 class usersMongoDao {
     constructor() {
