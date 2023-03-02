@@ -62,6 +62,9 @@ Several npm packages are used to provide specific functionality to the backend. 
 
 **-Dotenv:** Access environment variables.
 
+## Contact Info
+If you have any questions, feel free to contact me [here](https://santygegenschatz.netlify.app/)
+
 
 
 
