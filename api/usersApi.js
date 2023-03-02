@@ -1,9 +1,11 @@
 const usersDao = require('../factory/usersFactory')
 const cartsApi = require('./cartsApi')
+const { sendEmail } = require('../utils/comms/nodemailer')
+
 
 const { logError, logDebug } = require('../loggers/logger')
 
-class usersMongoDao {
+class usersApi {
     constructor() {
         const isLocal = process.env.USER_API_CONTAINER === 'mongoLocal' ? true : false
         this.usersDao = usersDao
@@ -71,6 +73,14 @@ class usersMongoDao {
             await this.updateUser(id, {purchaseHistory})
             // Set CurrentCart to undefined
             await this.updateUser(id, {currentCart: ''})
+            // Send an email saying the purchase was completed
+            const total = await cartsApi.calculateCartTotal(cartId)
+            logDebug(total.payload)
+            sendEmail(process.env.ADMIN_EMAIL, 
+                'Purchase completed', 
+                `A purchase was completed by user ${user.username}. 
+                The items purchased were: ${cart.payload.items.map( (item) => {return item.name} ).join(', ')}. 
+                The total was: ${total.payload} USD`)
             // Return success
             return this.throwSuccess('Purchase completed')
         } catch (err) {
@@ -166,4 +176,4 @@ class usersMongoDao {
     }
 }
 
-module.exports = new usersMongoDao()
+module.exports = new usersApi()

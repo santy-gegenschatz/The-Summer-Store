@@ -59,6 +59,22 @@ class CartsApi {
         }
     }
 
+    async calculateCartTotal(idCart) {
+        const cartResponse = await this.getCart(idCart)
+        if (cartResponse.code === 200) {
+            const cart = cartResponse.payload
+            const cartItems = cart.items
+            let total = 0
+            for (let i = 0; i < cartItems.length; i++) {
+                const item = cartItems[i]
+                total += item.price * item.quantity
+            }
+            return this.throwSuccess('Cart total calculated', total)
+        } else {
+            return this.throwError('There was an error calculating the cart total. Please check the provided cart id.')
+        }
+    }
+    
     async createCart() {
         const newCart = {creationDate: new Date().toISOString(), items: []}
         logDebug('Creating new cart')
