@@ -1,4 +1,5 @@
 node_modules
+.env
 logs/error.log
 logs/warn.log
 private/uploads
