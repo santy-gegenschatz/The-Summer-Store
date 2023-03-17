@@ -29,7 +29,7 @@ It can be found online at the following address: https://the-summer-store.up.rai
 
 
 ## Architecture
-The system is based on an express server running on Node.JS. Api's are separated according to the data persistency method they use.
+The system is based on an express server running on Node.JS. Api's are separated as usual according to the data persistency method they use.
 
 ## Tech
 Several npm packages are used to provide specific functionality to the backend. Some of them are:  
