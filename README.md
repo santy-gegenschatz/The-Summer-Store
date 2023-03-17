@@ -1,7 +1,7 @@
 # The Summer Store
 [The Summer Store](https://the-summer-store.up.railway.app/) is a straightforward ecommerce backend. It includes several RESTful API's, each of them working with different containers and data persistency methods. 
 
-Features include: authentication, cart, purchase history, realtime updates, admin panel and more. 
+Features include: authentication, cart, purchase history, realtime updates, admin panel and much more. 
 
 It can be found online at the following address: https://the-summer-store.up.railway.app/
 
